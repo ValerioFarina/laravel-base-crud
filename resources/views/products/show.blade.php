@@ -21,6 +21,15 @@
                         Prezzo : {{ number_format($product->price, 2, ',', '.') }} €
                     </li>
                     <li>
+                        Valutazione clienti :
+                        @for ($i=0; $i<$stars['solid']; $i++)
+                            <i class="fas fa-star"></i>
+                        @endfor
+                        @for ($i=0; $i<$stars['regular']; $i++)
+                            <i class="far fa-star"></i>
+                        @endfor
+                    </li>
+                    <li>
                         Descrizione : {{ $product->description }}
                     </li>
                 </ul>

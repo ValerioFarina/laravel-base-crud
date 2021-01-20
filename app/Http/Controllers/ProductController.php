@@ -53,8 +53,14 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         if ($product) {
+            $max_rating = 5;
+            $stars = [
+                'solid' => $product->customer_rating,
+                'regular' => $max_rating - $product->customer_rating
+            ];
             $data = [
-                'product' => $product
+                'product' => $product,
+                'stars' => $stars
             ];
             return view('products.show', $data);
         }
