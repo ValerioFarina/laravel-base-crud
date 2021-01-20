@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <ul class="products-details">
+                <ul class="product-details">
                     <li>
                         Marca : {{ $product->brand }}
                     </li>
