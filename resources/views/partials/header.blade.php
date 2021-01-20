@@ -6,7 +6,7 @@
                     <a class="nav-link" href="{{ route('homepage') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+                    <a class="nav-link" href="{{ route('products.index') }}">Prodotti</a>
                 </li>
             </ul>
         </div>

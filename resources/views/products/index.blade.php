@@ -5,26 +5,21 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @foreach ($products as $product)
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="product-card">
-                        <ul class="product-info">
-                            <li>
-                                Nome : {{ $product->name }}
-                            </li>
-                            <li>
-                                Prezzo : {{ $product->price }}
-                            </li>
-                            <li>
-                                Marca : {{ $product->brand }}
-                            </li>
-                            <li>
-                                Descrizione : {{ $product->description }}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            @endforeach
+            <div class="col-12">
+                <h1>Prodotti</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="products-list">
+                    @foreach ($products as $product)
+                        <li>
+                            {{ $product->name }} ----->
+                            <a href="{{ route('products.show', ['product' => $product->id]) }}">Dettagli prodotto</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </div>
 @endsection
