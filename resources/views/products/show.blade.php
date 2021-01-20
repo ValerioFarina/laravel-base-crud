@@ -18,7 +18,7 @@
                         Marca : {{ $product->brand }}
                     </li>
                     <li>
-                        Prezzo : {{ $product->price }} euro
+                        Prezzo : {{ number_format($product->price, 2, ',', '.') }} €
                     </li>
                     <li>
                         Descrizione : {{ $product->description }}
