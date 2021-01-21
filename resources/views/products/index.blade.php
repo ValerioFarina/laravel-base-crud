@@ -15,7 +15,9 @@
                     @foreach ($products as $product)
                         <li>
                             {{ $product->name }}
-                            <a href="{{ route('products.show', ['product' => $product->id]) }}" class="btn">Dettagli prodotto</a>
+                            <a href="{{ route('products.show', ['product' => $product->id]) }}" class="btn">
+                                Dettagli prodotto
+                            </a>
                         </li>
                     @endforeach
                 </ul>
