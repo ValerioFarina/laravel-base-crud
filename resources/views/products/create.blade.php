@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form method="POST">
+                <form method="POST" action="{{ route('products.store') }}">
                     @csrf
                     <div class="form-group">
                         <label>Nome: </label>
