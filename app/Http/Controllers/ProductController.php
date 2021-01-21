@@ -40,7 +40,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd('submitted!!!');
+        $data = $request->all();
+        dd($data);
     }
 
     /**
