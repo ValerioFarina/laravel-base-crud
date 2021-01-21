@@ -43,7 +43,8 @@ class ProductController extends Controller
         $data = $request->all();
         $new_product = new Product();
         $new_product->fill($data);
-        dd($new_product);
+        $new_product->save();
+        return redirect()->route('products.index');
     }
 
     /**
