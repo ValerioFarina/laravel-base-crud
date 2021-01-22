@@ -20,8 +20,8 @@
                         <input type="text" name="name" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Prezzo: </label>
-                        <input type="number" name="price" class="form-control">
+                        <label>Prezzo (€): </label>
+                        <input type="number" name="price" class="form-control" step="0.01">
                     </div>
                     <div class="form-group">
                         <label>Marca: </label>
@@ -29,11 +29,18 @@
                     </div>
                     <div class="form-group">
                         <label>Valutazione clienti: </label>
-                        <input type="number" name="customer_rating" class="form-control">
+                        <select class="form-control" name="customer_rating">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Descrizione: </label>
-                        <input type="text" name="description" class="form-control">
+                        <textarea name="description" rows="8" cols="80" class="form-control"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success">
                         Aggiungi prodotto

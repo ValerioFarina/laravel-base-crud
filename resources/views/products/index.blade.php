@@ -18,6 +18,9 @@
                             <a href="{{ route('products.show', ['product' => $product->id]) }}" class="btn btn-info">
                                 Dettagli prodotto
                             </a>
+                            <a href="{{ route('products.edit', ['product' => $product->id]) }}" class="btn btn-warning">
+                                Modifica prodotto
+                            </a>
                         </li>
                     @endforeach
                 </ul>
