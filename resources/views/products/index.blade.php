@@ -21,6 +21,13 @@
                             <a href="{{ route('products.edit', ['product' => $product->id]) }}" class="btn btn-warning">
                                 Modifica prodotto
                             </a>
+                            <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="POST" class="d-inline-block">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit" class="btn btn-danger">
+                                    Elimina prodotto
+                                </button>
+                            </form>
                         </li>
                     @endforeach
                 </ul>
