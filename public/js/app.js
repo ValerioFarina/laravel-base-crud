@@ -30220,17 +30220,10 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 $(document).ready(function () {
   $('.products-list').on('click', '.delete-product', function () {
-    var productId = $(this).parent().attr('id');
-    $('.delete-window').removeClass('d-none');
-    var deleteRoute = $('.delete-window').children('form').attr('action');
-    deleteRoute = deleteRoute.replace('productId', productId);
-    $('.delete-window').children('form').attr('action', deleteRoute);
-    $('.delete-window > button').click(function () {
-      $('.delete-window').addClass('d-none');
-      deleteRoute = $('.delete-window').children('form').attr('action');
-      deleteRoute = deleteRoute.replace("products/".concat(productId), 'products/productId');
-      $('.delete-window').children('form').attr('action', deleteRoute);
-    });
+    $(this).siblings('.layover').removeClass('d-none');
+  });
+  $('.delete-window button.no').click(function () {
+    $('.layover').addClass('d-none');
   });
 });
 

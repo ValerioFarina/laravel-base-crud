@@ -10948,30 +10948,45 @@ main {
   position: relative;
 }
 
-main .products-list li {
+main .products-container {
+  position: static;
+}
+
+main .products-container .products-list li {
   padding: 15px;
 }
 
-main .products-list li span {
+main .products-container .products-list li .product-name {
   display: inline-block;
   margin-right: 15px;
 }
 
-main .delete-window {
+main .products-container .products-list li .layover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #b8b8b894;
+}
+
+main .products-container .products-list li .layover .delete-window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
   padding: 50px;
   text-align: center;
-  background-color: #b8b8b8;
+  background-color: white;
 }
 
-main .delete-window h4 {
+main .products-container .products-list li .layover .delete-window h4 {
   margin-bottom: 25px;
 }
 
-main .delete-window form button {
+main .products-container .products-list li .layover .delete-window button.yes {
   margin-right: 15px;
 }
 
