@@ -20,6 +20,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "bootstrap": "^4.6.0"
+        "bootstrap": "^4.6.0",
+        "handlebars": "^4.7.6",
+        "jquery": "^3.5.1",
+        "sweetalert2": "^10.13.0"
     }
 }
